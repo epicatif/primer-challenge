@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "primer-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Armando Salazar <armando.salazar.andrade@gmail.com>"]
+readme = "README.md"
+packages = [{include = "primer_challenge"}]
+
+[tool.poetry.dependencies]
+python = "3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
