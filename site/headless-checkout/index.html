@@ -17,7 +17,7 @@
     
     
       
-        <title>Headless Checkout - My Docs</title>
+        <title>Headless Checkout - PrimerDocs</title>
       
     
     
@@ -80,7 +80,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href=".." title="PrimerDocs" class="md-header__button md-logo" aria-label="PrimerDocs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +93,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            My Docs
+            PrimerDocs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -166,13 +166,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href=".." title="PrimerDocs" class="md-nav__button md-logo" aria-label="PrimerDocs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    My Docs
+    PrimerDocs
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -186,7 +186,7 @@
   
     <li class="md-nav__item">
       <a href="../universal-checkout/" class="md-nav__link">
-        Home
+        Universal Checkout
       </a>
     </li>
   
@@ -209,14 +209,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Universal Checkout
+          Quick Start
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Universal Checkout" data-md-level="1">
+      <nav class="md-nav" aria-label="Quick Start" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Universal Checkout
+          Quick Start
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -367,23 +367,23 @@
 <ol>
 <li>
 <p>Create your Headless Checkout instance using the <code>clientToken</code>:</p>
-<p><code>TS
-const headless = await Primer.createHeadless(clientToken)</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">headless</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">Primer</span><span class="p">.</span><span class="nx">createHeadless</span><span class="p">(</span><span class="nx">clientToken</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 </li>
 <li>
 <p>Configure Headless Checkout with a callback to retrieve payment methods:</p>
-<p><code>TS
-await headless.configure({
-    onAvailablePaymentMethodsLoad
-});</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">headless</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span><span class="w"></span>
+<span class="w">    </span><span class="nx">onAvailablePaymentMethodsLoad</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div>
 <blockquote>
 <p><strong>Info</strong>: Consult <a href="https://primer.io/docs/accept-payments/headless-universal-checkout/web#configure-headless-universal-checkout">optional callbacks</a> for the Headless Checkout.</p>
 </blockquote>
 </li>
 <li>
 <p>Set <code>headless.start()</code> to retrieve the list of payment methods assigned through Dashboard and start the checkout flow:</p>
-<p><code>TS
-await headless.start()</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">headless</span><span class="p">.</span><span class="nx">start</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
 <blockquote>
 <p><strong>Info</strong>: Learn more on <a href="https://primer.io/docs/accept-payments/headless-universal-checkout/web#configure-headless-universal-checkout">setting up Headless Universal Checkout</a>.</p>
 </blockquote>
@@ -413,64 +413,64 @@ await headless.start()</code></p>
 </li>
 </ol>
 <p>The JSON response of your new payment looks as follows:</p>
-<pre><code class="language-JSON">{
-  &quot;id&quot;: &quot;kHdEw9EG&quot;,
-  &quot;date&quot;: &quot;2021-02-21T15:36:16.367687&quot;,
-  &quot;status&quot;: &quot;AUTHORIZED&quot;,
-  &quot;orderId&quot;: &quot;order-abc&quot;,
-  &quot;currencyCode&quot;: &quot;EUR&quot;,
-  &quot;amount&quot;: 42,
-  &quot;customerId&quot;: &quot;customer-123&quot;,
-  &quot;customer&quot;: {
-    &quot;email&quot;: &quot;customer123@gmail.com&quot;
-  },
-  &quot;paymentMethod&quot;: {
-    &quot;paymentMethodToken&quot;: &quot;heNwnqaeRiqvY1UcslfQc3wxNjEzOTIxNjc4&quot;,
-    &quot;isVaulted&quot;: true,
-    &quot;descriptor&quot;: &quot;Purchase: Socks&quot;,
-    &quot;analyticsId&quot;: &quot;VtkMDAxZW5isH0HsbbNxZ3lo&quot;,
-    &quot;paymentMethodType&quot;: &quot;PAYMENT_CARD&quot;,
-    &quot;paymentMethodData&quot;: {
-      &quot;first6Digits&quot;: &quot;411111&quot;,
-      &quot;last4Digits&quot;: &quot;1111&quot;,
-      &quot;expirationMonth&quot;: &quot;12&quot;,
-      &quot;expirationYear&quot;: &quot;2030&quot;,
-      &quot;cardholderName&quot;: &quot;John Biggins&quot;,
-      &quot;network&quot;: &quot;Visa&quot;,
-      &quot;isNetworkTokenized&quot;: false,
-      &quot;binData&quot;: {
-        &quot;network&quot;: &quot;VISA&quot;,
-        &quot;regionalRestriction&quot;: &quot;UNKNOWN&quot;,
-        &quot;accountNumberType&quot;: &quot;UNKNOWN&quot;,
-        &quot;accountFundingType&quot;: &quot;UNKNOWN&quot;,
-        &quot;prepaidReloadableIndicator&quot;: &quot;NOT_APPLICABLE&quot;,
-        &quot;productUsageType&quot;: &quot;UNKNOWN&quot;,
-        &quot;productCode&quot;: &quot;VISA&quot;,
-        &quot;productName&quot;: &quot;VISA&quot;
-      }
-    }
-  },
-  &quot;processor&quot;: {
-    &quot;name&quot;: &quot;STRIPE&quot;,
-    &quot;processor_merchant_id&quot;: &quot;acct_stripe_1234&quot;,
-    &quot;amountCaptured&quot;: 0,
-    &quot;amountRefunded&quot;: 0
-  },
-  &quot;transactions&quot;: [
-    {
-      &quot;type&quot;: &quot;SALE&quot;,
-      &quot;processorStatus&quot;: &quot;AUTHORIZED&quot;,
-      &quot;processorName&quot;: &quot;STRIPE&quot;,
-      &quot;processorMerchantId&quot;: &quot;acct_stripe_1234&quot;,
-      &quot;processorTransactionId&quot;: &quot;54c4eb5b3ef8a&quot;
-    }
-  ],
-  &quot;metadata&quot;: {
-    &quot;productId&quot;: 123,
-    &quot;merchantId&quot;: &quot;a13bsd62s&quot;
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kHdEw9EG&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02-21T15:36:16.367687&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AUTHORIZED&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;orderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;order-abc&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;currencyCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;customerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer-123&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;customer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer123@gmail.com&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;paymentMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;paymentMethodToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;heNwnqaeRiqvY1UcslfQc3wxNjEzOTIxNjc4&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;isVaulted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;descriptor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Purchase: Socks&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;analyticsId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VtkMDAxZW5isH0HsbbNxZ3lo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;paymentMethodType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAYMENT_CARD&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;paymentMethodData&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;first6Digits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;411111&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;last4Digits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1111&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;expirationMonth&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;expirationYear&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2030&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;cardholderName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Biggins&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;network&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Visa&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;isNetworkTokenized&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;binData&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;network&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VISA&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;regionalRestriction&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNKNOWN&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;accountNumberType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNKNOWN&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;accountFundingType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNKNOWN&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prepaidReloadableIndicator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOT_APPLICABLE&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;productUsageType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UNKNOWN&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;productCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VISA&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;productName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VISA&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;processor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STRIPE&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;processor_merchant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;acct_stripe_1234&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amountCaptured&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amountRefunded&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;transactions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SALE&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;processorStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AUTHORIZED&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;processorName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STRIPE&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;processorMerchantId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;acct_stripe_1234&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;processorTransactionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;54c4eb5b3ef8a&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;productId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;merchantId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a13bsd62s&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <blockquote>
 <p><strong>Info</strong>: Learn more on <a href="https://apiref.primer.io/reference/create_payment_payments_post">creating payments manually</a>.</p>
 </blockquote>
