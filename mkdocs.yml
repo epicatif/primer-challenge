@@ -1,0 +1,13 @@
+site_name: PrimerDocs
+site_url: https://example.com/
+nav:
+    - Universal Checkout: 'universal-checkout.md'
+    - 'Quick Start':
+      - 'Drop-in UI Checkout': 'universal-checkout/drop-in-ui-checkout.md'
+      - 'Headless Checkout': 'universal-checkout/headless-checkout.md'
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
